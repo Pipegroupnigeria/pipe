@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".NewPost">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize">
+
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/ic_back"
+                android:onClick="back"
+                android:scaleType="center"
+                android:layout_centerVertical="true"/>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="100dp"
+                android:layout_height="45dp"
+                android:onClick="post"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="10dp"
+                app:cardBackgroundColor="@color/bluepipe"
+                app:cardCornerRadius="15dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/gothic"
+                    android:text="Post"
+                    android:textStyle="bold"
+                    android:textSize="20sp"/>
+
+
+
+            </android.support.v7.widget.CardView>
+
+
+        </RelativeLayout>
+
+    </android.support.design.widget.AppBarLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="5dp"
+        app:layout_behavior="android.support.design.widget.AppBarLayout$ScrollingViewBehavior"
+        >
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:id="@+id/choicelay">
+
+
+            <ImageView
+                android:id="@+id/centerdiv"
+                android:layout_width="40dp"
+                android:layout_height="60dp"
+                android:layout_centerInParent="true"/>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:onClick="image"
+                android:layout_toStartOf="@+id/centerdiv"
+                app:cardCornerRadius="25dp"
+                android:layout_centerVertical="true"
+                app:cardBackgroundColor="@color/bluepipe">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/ic_image_black_24dp"
+                    android:scaleType="center"/>
+
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:onClick="write"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@+id/centerdiv"
+                app:cardCornerRadius="25dp">
+
+
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/ic_write"
+                    android:scaleType="center"/>
+
+            </android.support.v7.widget.CardView>
+
+
+
+
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/choicelay">
+
+
+            <EditText
+                android:id="@+id/posttext"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:hint="Type Text here"
+                android:fontFamily="@font/gothic"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                android:visibility="visible"
+                android:textColor="#aa000000"/>
+
+            <RelativeLayout
+                android:id="@+id/postimagelay"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone"
+                >
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/white"
+                    android:fontFamily="@font/gothic"
+                    android:hint="Type capture here"
+                    android:paddingLeft="10dp"
+                    android:gravity="center_vertical"
+                    android:textColor="#aa000000"
+                    android:id="@+id/postcapture"/>
+                <ImageView
+                    android:id="@+id/postimage"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_above="@+id/postcapture"
+                    android:scaleType="centerCrop"
+                    android:src="@mipmap/pipemeet"/>
+
+
+            </RelativeLayout>
+
+
+
+
+        </RelativeLayout>
+
+
+
+
+
+
+
+    </RelativeLayout>
+
+
+
+
+   <!-- <include layout="@layout/content_new_post"/>-->
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="@dimen/cardview_compat_inset_shadow"
+        app:srcCompat="@android:drawable/ic_dialog_email" />
+
+</android.support.design.widget.CoordinatorLayout>

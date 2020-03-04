@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/direct_messsage_circleimage"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.069"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@mipmap/pipedance" />
+
+    <TextView
+        android:id="@+id/direct_message_chattext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.092"
+        app:layout_constraintStart_toEndOf="@+id/direct_messsage_circleimage"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="Where are you? are u sure that thhbcx fb as bfasbh ba sbhjc"
+        android:fontFamily="@font/gothic"
+        android:maxLines="1"
+        android:maxEms="10"/>
+
+    <ImageView
+        android:id="@+id/direct_message_green_online"
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:background="@drawable/circlegreen"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.937"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+</android.support.constraint.ConstraintLayout>
